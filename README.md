@@ -63,11 +63,11 @@ The `/` operator returns a decimal result, while `~` returns an integer result.
 
 |Bug|The line / problem|Why it is wrong|Fix|
 
-|1|`_brand` and `battery` declarations|Non-nullable fields need initial values.|Initialize them with `''` and `0`.|
-|2|`SmartPhone` constructor|The parent `Phone` constructor needs brand and battery.|Add `: super(brand, battery)`.|
-|3|`@override void restart()`|The parent class does not define `restart()`.|Add `restart()` to `Phone`, then override it.|
-|4|Missing battery setter|`p.battery = 100` cannot work with only a getter.|Add a setter accepting values from 0 to 100.|
-|5|`print(p.battery())`|`battery` is a getter property, not a method.|Use `print(p.battery)`.|
+1`_brand` and `battery` declarations|Non-nullable fields need initial values.|Initialize them with `''` and `0`.|
+2`SmartPhone` constructor|The parent `Phone` constructor needs brand and battery.|Add `: super(brand, battery)`.|
+3`@override void restart()`|The parent class does not define `restart()`.|Add `restart()` to `Phone`, then override it.|
+4Missing battery setter|`p.battery = 100` cannot work with only a getter.|Add a setter accepting values from 0 to 100.|
+5`print(p.battery)`|`battery` is a getter property, not a method.|Use `print(p.battery)`.|
 
 ### Not a bug
 
