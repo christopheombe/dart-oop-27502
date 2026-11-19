@@ -14,7 +14,7 @@
 ## Files
 
 * `main.dart`: Parts 1, 2 and 3.
-* `bug\\\\\\\_hunt.dart`: Part 4, corrected Phone and SmartPhone program.
+* `bug_hunt.dart`: Part 4, corrected Phone and SmartPhone program.
 
 ## Output of main.dart
 
@@ -43,11 +43,11 @@ There is no setter for balance because the balance should not be changed directl
 
 ## Part 2: What does \~/ do?
 
-The `\\\\\\\~/` operator performs integer division. It returns the whole-number result and removes the decimal part.
+The ~ operator performs integer division. It returns the whole-number result and removes the decimal part.
 
 dart
-print(237 \\\\\\\* 17 / 100);
-print(237 \\\\\\\* 17 \\\\\\\~/ 100);
+print(237 * 17  100);
+print(237 * 17 ~/ 100);
 
 
 Output:
@@ -57,13 +57,13 @@ text
 40
 
 
-The `/` operator returns a decimal result, while `\\\\\\\~/` returns an integer result.
+The `/` operator returns a decimal result, while `~` returns an integer result.
 
 ## Part 4: Bug table
 
 |Bug|The line / problem|Why it is wrong|Fix|
-|-|-|-|-|
-|1|`\\\\\\\_brand` and `\\\\\\\_battery` declarations|Non-nullable fields need initial values.|Initialize them with `''` and `0`.|
+
+|1|`_brand` and `battery` declarations|Non-nullable fields need initial values.|Initialize them with `''` and `0`.|
 |2|`SmartPhone` constructor|The parent `Phone` constructor needs brand and battery.|Add `: super(brand, battery)`.|
 |3|`@override void restart()`|The parent class does not define `restart()`.|Add `restart()` to `Phone`, then override it.|
 |4|Missing battery setter|`p.battery = 100` cannot work with only a getter.|Add a setter accepting values from 0 to 100.|
@@ -73,7 +73,7 @@ The `/` operator returns a decimal result, while `\\\\\\\~/` returns an integer 
 
 Phone p = new Phone('Tecno', 50);` is valid Dart. The `new` keyword is optional, but it is still allowed. It does not need to be deleted.
 
-The corrected `bug\\\\\\\_hunt.dart` program prints:
+The corrected `bug_hunt.dart` program prints:
 
 text
 100
